@@ -1,0 +1,29 @@
+name: "twltool Build"
+on: 
+  push:
+    branches:
+      - macOS 
+  pull_request:
+    branches: 
+      - '*'
+  workflow_dispatch:
+jobs:
+  macOS:
+    name: Build on macOS
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Build
+        run: |
+          make arm_app ARM=1
+          make clean
+          make x86_app
+          make universal_app
+          mkdir output
+          cp twltool output/twltool
+      - name: Upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: twltool_macOS
+          path: output
