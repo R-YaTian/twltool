@@ -1,5 +1,5 @@
-TWLTool v1.6, by WulfyStylez.
-5/25/2016
+TWLTool v1.7, by WulfyStylez.
+9/16/2017
 
 Special thanks to Martin Korth, CaitSith2, Team Twiizers, Yellows8, Neimod, 3DSGuy, Dazzozo, and Shiny Quagsire.
 
